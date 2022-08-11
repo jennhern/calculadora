@@ -1,0 +1,232 @@
+:root {
+    --font-family: "Spartan", sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+.theme_1{   
+  --color-bg-main: hsl(222, 26%, 31%);
+  --color-bg-display: hsl(224, 36%, 15%);
+  --color-bg-keypad: hsl(223, 31%, 20%);
+  --color-bg-toggle: hsl(223, 31%, 20%);
+  --color-toggle: hsl(6, 63%, 50%);
+  --color-header-text: white;
+  --color-display-text: white;
+  --color-bg-btn-number: hsl(30, 25%, 89%);
+  --color-sd-btn-number: hsl(28, 16%, 65%);
+  --color-bg-btn-erase: hsl(225, 21%, 49%);
+  --color-sd-btn-erase: hsl(224, 28%, 35%);
+  --color-bg-btn-equal: hsl(6, 63%, 50%);
+  --color-sd-btn-equal: hsl(6, 70%, 34%);
+  --color-btn-text-number: hsl(221, 14%, 31%);
+  --color-btn-text-erase: white;
+  --color-btn-text-equal: white;
+}
+.theme-2 {
+  --color-bg-main: hsl(0, 0%, 90%);
+  --color-bg-display: hsl(0, 0%, 93%);
+  --color-bg-keypad: hsl(0, 5%, 81%);
+  --color-bg-toggle: hsl(0, 5%, 81%);
+  --color-toggle: hsl(25, 98%, 40%);
+  --color-header-text: hsl(60, 10%, 19%);
+  --color-display-text: hsl(60, 10%, 19%);
+  --color-bg-btn-number: hsl(45, 7%, 89%);
+  --color-sd-btn-number: hsl(35, 11%, 61%);
+  --color-bg-btn-erase: hsl(185, 42%, 37%);
+  --color-sd-btn-erase: hsl(185, 58%, 25%);
+  --color-bg-btn-equal: hsl(25, 98%, 40%);
+  --color-sd-btn-equal: hsl(25, 99%, 27%);
+  --color-btn-text-number: hsl(60, 10%, 19%);
+  --color-btn-text-erase: white;
+  --color-btn-text-equal: white;
+}
+
+.theme-3 {
+  --color-bg-main: hsl(268, 75%, 9%);
+  --color-bg-display: hsl(268, 71%, 12%);
+  --color-bg-keypad: hsl(268, 71%, 12%);
+  --color-bg-toggle: hsl(268, 71%, 12%);
+  --color-toggle: hsl(176, 100%, 44%);
+  --color-header-text: hsl(52, 100%, 62%);
+  --color-display-text: hsl(52, 100%, 62%);
+  --color-bg-btn-number: hsl(268, 47%, 21%);
+  --color-sd-btn-number: hsl(290, 70%, 36%);
+  --color-bg-btn-erase: hsl(281, 89%, 26%);
+  --color-sd-btn-erase: hsl(285, 91%, 52%);
+  --color-bg-btn-equal: hsl(176, 100%, 44%);
+  --color-sd-btn-equal: hsl(177, 92%, 70%);
+  --color-btn-text-number: hsl(52, 100%, 62%);
+  --color-btn-text-erase: white;
+  --color-btn-text-equal: hsl(198, 20%, 13%);
+}
+
+body {
+    margin:0;
+    font-family: var(--font-family);
+    font-weight: 700;
+  }
+  
+  .header,
+  .display,
+  .buttons {
+    width: 590px;
+  }
+  /*
+   * HEADER STYLES
+   */
+  .header {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-header-text);
+  }
+  .header_title {
+    margin: 0;
+  }
+  .theme {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+  }
+  .theme_title {
+    display: flex;
+    align-items: end;
+    margin: 0;
+    padding-bottom: 2px;
+    font-size: 0.5rem;
+  }
+  .theme_selectors {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 3rem;
+  }
+  
+  .theme_numbers {
+    display: flex;
+    justify-content: space-around;
+    padding: 2px;
+    font-size: 0.5rem;
+  }
+  
+  .theme_rail {
+    position: relative;
+    padding: 2px;
+    background-color: var(--color-bg-toggle);
+    height: 1rem;
+    border-radius: 25px;
+  }
+  
+  .theme_point {
+    position: relative;
+    background-color: var(--color-toggle);
+    height: 0.7rem;
+    width: 0.7rem;
+    border-radius: 50%;
+    transition: left 1s;
+  }
+  .theme_point-1 {
+    left: 0;
+  }
+  .theme_point-2 {
+    left: calc(100% / 2 - 0.7rem / 2);
+  }
+  .theme_point-3 {
+    left: calc(100% - 0.7rem - 2px);
+  }
+  /*
+  * MAIN STYLES
+  */
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    max-width: 1440px;
+    background-color: var(--color-bg-main);
+    transition: background-color 1s;
+  }
+  .display,
+  .buttons {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    transition: background-color 1s;
+  }
+  .display {
+    background-color: var(--color-bg-display);
+    color: var(--color-display-text);
+   
+  }
+  .display_text {
+    text-align: right;
+    margin: 0;
+    font-size: 3rem;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background-color: var(--color-bg-keypad);
+  }
+  
+  .button {
+    width: 7rem;
+    height: 5rem;
+    font-family: var(--font-family);
+    font-size: 2rem;
+    color: var(--color-btn-text-number);
+    outline: 0;
+    border: 0px;
+    border-radius: 10px;
+    background-color: var(--color-bg-btn-number);
+    box-shadow: inset 0px -5px 5px var(--color-sd-btn-number);
+    transition: background-color 1s;
+  }
+  .button_eraser {
+    color: var(--color-btn-text-erase);
+    background-color: var(--color-bg-btn-erase);
+    box-shadow: inset 0px -5px 5px var(--color-sd-btn-erase);
+  }
+  
+  .button_equal {
+    color: var(--color-btn-text-equal);
+    background-color: var(--color-bg-btn-equal);
+    box-shadow: inset 0px -5px 5px var(--color-sd-btn-equal);
+  }
+  
+  .button_small {
+    font-size: 1.5rem;
+  }
+  
+  .button_double {
+    flex-grow: 1;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .header,
+    .display,
+    .buttons {
+      width: 305px;
+}
+   
+    .buttons {
+      gap: 1rem;
+      padding: 1rem;
+}
+    .button {
+      width: 3.5rem;
+      height: 3.5rem;
+      font-size: 1.3rem;
+  
+}
+
+    
+
+  }
